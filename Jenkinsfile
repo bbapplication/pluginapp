@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                
-                git branch: 'main', url: 'https://github.com/bbapplication/pluginapp.git'
+                 checkout scm
 
                 
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
